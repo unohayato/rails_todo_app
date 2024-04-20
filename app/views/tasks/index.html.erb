@@ -1,21 +1,11 @@
-
-<!DOCKTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Todo</title>
-  </head>
-  <body>
-    <h1>Tasks</h1>
-    <% for task in @tasks %>
-      <h2>Title: <%= task.title %></h2>
-      <p>Content: <%= task.content %></p>
-      <% if task.completed %>
-        <p>Completed</p>
-      <% else %>
-        <p>Uncompleted</p>
-      <% end %>
-    <% end %>
-    
-  <body>
-</html>
+<h1>Tasks</h1>
+<%= link_to("New Task", new_task_path) %>
+<% for task in @tasks %>
+  <h2>Title: <%= task.title %></h2>
+  <p>Content: <%= task.content %></p>
+  <% if task.completed %>
+    <p>Completed</p>
+  <% else %>
+    <p>Uncompleted</p>
+  <% end %>
+<% end %>
