@@ -1,0 +1,9 @@
+one:
+  title: "Example Task"
+  content: "This is an example task for testing."
+  completed: false
+
+two:
+  title: "Another Task"
+  content: "This is another task to test different scenarios."
+  completed: true
