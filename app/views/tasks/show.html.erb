@@ -1,11 +1,19 @@
 <h1>Show Task</h1>
-<h2>Title: <%= @task.title %></h2>
-<p>Content: <%= @task.content %></p>
-<% if @task.completed %>
-  <p>IsCompleted: Completed</p>
-<% else %>
-  <p>IsCompleted: Uncompleted</p>
-<% end %>
+<div>
+  <h2>Title: <%= @task.title %></h2>
+  <p>Content: <%= @task.content %></p>
+  <% if @task.completed == true %>
+    <p>IsCompleted: Completed</p>
+  <% else %>
+    <p>IsCompleted: Uncompleted</p>
+  <% end %>
 
-<p>Created_at: <%= @task.created_at %></p>
-<p>Updated_at: <%= @task.updated_at %></p>
+  <p>Created_at: <%= @task.created_at %></p>
+  <p>Updated_at: <%= @task.updated_at %></p>
+</div>
+
+<div>
+  <%= link_to("Edit", edit_task_path(@task))  %>
+  <%= link_to 'Delete', @task, data: { turbo_method: :delete } %>
+</div>
+

@@ -5,5 +5,9 @@
   <p><%= f.label :content, 'Content' %></p>
   <p><%= f.text_area :content %></p>
   
-  <%= f.submit "Create Task" %>
+  <% if @task.new_record? %>
+    <%= f.submit "Create Task" %>
+  <% else %>
+    <%= f.submit "Update Task" %>
+  <% end %>
 <% end %>

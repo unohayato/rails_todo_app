@@ -1,11 +1,11 @@
 <h1>Tasks</h1>
 <%= link_to("New Task", new_task_path) %>
 <% for task in @tasks %>
-  <h2>Title: <%= task.title %></h2>
+  <h2>Title: <%= link_to("#{task.title}", task_path(task.id)) %></h2>
   <p>Content: <%= task.content %></p>
-  <% if task.completed %>
-    <p>Completed</p>
+  <% if task.completed == true %>
+    <p>IsCompleted: Completed</p>
   <% else %>
-    <p>Uncompleted</p>
+    <p>IsCompleted: Uncompleted</p>
   <% end %>
 <% end %>
