@@ -1,0 +1,14 @@
+<h1>Show User</h1>
+<div>
+  <h2>Name: <%= @user.name %></h2>
+  <h2>Email: <%= @user.email %></h2>
+
+  <p>Created_at: <%= @user.created_at %></p>
+  <p>Updated_at: <%= @user.updated_at %></p>
+</div>
+
+<div>
+  <%= link_to("Edit", edit_user_path(@user))  %>
+  <%= link_to 'Delete', @user, data: { turbo_method: :delete } %>
+</div>
+
