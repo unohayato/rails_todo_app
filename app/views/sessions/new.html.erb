@@ -5,13 +5,13 @@
     <%# フォームで送るデータがparamsに格納される名前空間を明示的に指定 %>
     <%= form_with(url: login_path, scope: :session) do |f| %>
 
-      <%= f.label :email %>
-      <%= f.email_field :email %>
+      <p><%= f.label :email %></p>
+      <p><%= f.email_field :email %></p>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+      <p><%= f.label :password %></p>
+      <p><%= f.password_field :password %></p>
 
-      <%= f.submit "Log in" %>
+      <p><%= f.submit "Log in" %></p>
     <% end %>
 
     <p>New user? <%= link_to "Sign up now!", signup_path %></p>
