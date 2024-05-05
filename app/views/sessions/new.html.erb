@@ -1,0 +1,19 @@
+<h1>Log in</h1>
+
+<div>
+  <div>
+    <%# フォームで送るデータがparamsに格納される名前空間を明示的に指定 %>
+    <%= form_with(url: login_path, scope: :session) do |f| %>
+
+      <p><%= f.label :email %></p>
+      <p><%= f.email_field :email %></p>
+
+      <p><%= f.label :password %></p>
+      <p><%= f.password_field :password %></p>
+
+      <p><%= f.submit "Log in" %></p>
+    <% end %>
+
+    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+  </div>
+</div>
